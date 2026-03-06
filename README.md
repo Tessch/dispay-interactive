@@ -13,6 +13,8 @@ React Query
 
 MSW (Mock Service Worker)
 
+Material UI
+
 ## Install
 
 npm install
@@ -45,4 +47,5 @@ When VITE_USE_MOCKS=true, the application uses mocked data instead of a real bac
 ## API Endpoints
 
 GET /customers
+
 GET /customers/{id}/orders

@@ -6,6 +6,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import TableFooter from "@mui/material/TableFooter";
 
 type Column<T> = {
   field: keyof T | string;
@@ -16,12 +17,14 @@ type Column<T> = {
 type SimpleTableProps<T> = {
   columns: Column<T>[];
   rows: T[];
+  footer?: ReactNode;
 };
 
 const SimpleTable = <T extends { id: number | string }>({
   columns,
   rows,
-}: SimpleTableProps<T>): JSX.Element => {
+  footer,
+}: SimpleTableProps<T>) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -46,6 +49,20 @@ const SimpleTable = <T extends { id: number | string }>({
             </TableRow>
           ))}
         </TableBody>
+
+        {footer && (
+          <TableFooter>
+            <TableRow>
+              <TableCell
+                colSpan={columns.length}
+                align="right"
+                sx={{ fontWeight: "bold", fontSize: 16 }}
+              >
+                {footer}
+              </TableCell>
+            </TableRow>
+          </TableFooter>
+        )}
       </Table>
     </TableContainer>
   );

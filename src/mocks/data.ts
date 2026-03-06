@@ -31,6 +31,7 @@ export const customers = [
 export const ordersByCustomer = {
   "1": [
     {
+      last_name: "Dupont",
       purchase_identifier: "P-1001",
       product_id: 501,
       quantity: 2,
@@ -39,6 +40,7 @@ export const ordersByCustomer = {
       date: "2024-11-01",
     },
     {
+      last_name: "Dupont",
       purchase_identifier: "P-1002",
       product_id: 700,
       quantity: 1,
@@ -49,6 +51,7 @@ export const ordersByCustomer = {
   ],
   "2": [
     {
+      last_name: "Martin",
       purchase_identifier: "P-2001",
       product_id: 120,
       quantity: 3,

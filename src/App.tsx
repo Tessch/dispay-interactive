@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import OrdersList from "./pages/OrdersList";
 import CustomersPage from "./pages/CustomerPage";
+import OrderPage from "./pages/OrderPage";
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/customers" replace />} />
         <Route path="/customers" element={<CustomersPage />} />
-        <Route path="/customers/:id/orders" element={<OrdersList />} />
+        <Route path="/customers/:id/orders" element={<OrderPage />} />
       </Routes>
     </div>
   );
