@@ -60,5 +60,15 @@ export const ordersByCustomer = {
       date: "2024-10-12",
     },
   ],
-  "3": [],
+  "3": [
+    {
+      last_name: "Bernard",
+      purchase_identifier: "P-2002",
+      product_id: 120,
+      quantity: 3,
+      price: 12.5,
+      currency: "EUR",
+      date: "2024-12-12",
+    },
+  ],
 } as const;
